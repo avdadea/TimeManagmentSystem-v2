@@ -4,7 +4,6 @@ require('../controllers/addEmployeeController.php');
 
 $controller = new AddEmployeeController($con);
 
-// Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $controller->processForm();
 }
@@ -13,7 +12,6 @@ $employeeId = isset($_GET['employeeid']) ? $_GET['employeeid'] : 0;
 $employeeData = $employeeId > 0 ? $controller->getEmployeeData($employeeId) : ['name' => '', 'email' => '', 'departmentId' => ''];
 
 
-// Your HTML code goes here with the necessary form elements.
 ?>
 
 <div class="content pb-0">

@@ -55,7 +55,6 @@ class DepartmentView {
         </div>
 
 <?php
-        // Include the footer or any other common HTML structure here
         require('includes/footer.inc.php');
     }
 }
