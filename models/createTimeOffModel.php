@@ -1,16 +1,21 @@
 <?php
 
 class CreateTimeOffModel {
-    public $con;
+    private $con;
 
     public function __construct($con) {
         $this->con = $con;
     }
+
     public function getCon() {
         return $this->con;
     }
 
     public function addTimeOffRequest($leaveType, $startDate, $endDate, $employeeId, $reason, $medicalDocument) {
+        $this->insertTimeOffRequest($leaveType, $startDate, $endDate, $employeeId, $reason, $medicalDocument);
+    }
+
+    private function insertTimeOffRequest($leaveType, $startDate, $endDate, $employeeId, $reason, $medicalDocument) {
         $sql = "INSERT INTO `time_off_request` (leave_type, startdate, enddate, employee_id, reason, medical_document, status)
                 VALUES (?, ?, ?, ?, ?, ?, 1)";
 
