@@ -18,7 +18,7 @@ class AddEmployeeModel {
         $email = mysqli_real_escape_string($this->con, $email);
         $departmentId = mysqli_real_escape_string($this->con, $departmentId);
 
-        // Check if a new password is provided, and update the password only if it is not empty
+        
         $passwordUpdate = empty($password) ? '' : ", password='" . mysqli_real_escape_string($this->con, $password) . "'";
 
         $sql = "UPDATE employee SET name='$name', email='$email'$passwordUpdate, departmentId='$departmentId' WHERE employeeid='$employeeId'";

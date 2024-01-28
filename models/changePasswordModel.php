@@ -13,9 +13,9 @@ class ChangePasswordModel {
         $res = mysqli_query($this->con, $sql);
 
         if ($res) {
-            // Password changed successfully, redirect to profile.php
+           
             header('Location: ../views/profile.php');
-            exit; // Make sure to exit after redirect
+            exit; 
         } else {
             echo '<div class="alert alert-danger" role="alert">Error changing password. Please try again.</div>';
         }
