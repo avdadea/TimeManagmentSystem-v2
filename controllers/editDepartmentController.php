@@ -12,7 +12,7 @@ class EditDepartmentController {
 
     public function editDepartment($departmentId, $newDepartmentName) {
         $this->editDepartmentModel->editDepartment($departmentId, $newDepartmentName);
-        header('location: index.php');  // Redirect to the department listing page after editing
+        header('location: index.php');  
         die();
     }
 }
