@@ -5,8 +5,9 @@ require_once('../models/logoutModel.php');
 class LogoutController {
     private $logoutModel;
 
-    public function __construct() {
-        $this->logoutModel = new LogoutModel();
+    // Dependency injection: Pass the LogoutModel instance through the constructor
+    public function __construct(LogoutModel $logoutModel) {
+        $this->logoutModel = $logoutModel;
     }
 
     public function logout() {
