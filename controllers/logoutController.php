@@ -1,6 +1,8 @@
 <?php
 
-require_once('../models/logoutModel.php');
+if (!class_exists('LogoutModel')) {
+    require('../models/logoutModel.php');
+}
 
 class LogoutController {
     private $logoutModel;

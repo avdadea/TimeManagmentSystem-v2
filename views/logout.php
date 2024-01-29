@@ -1,5 +1,12 @@
 <?php
+require('../models/logoutModel.php');
 require('../controllers/logoutController.php');
 
-$logoutController = new LogoutController();
+
+$logoutModel = new LogoutModel();
+$logoutController = new LogoutController($logoutModel);
 $logoutController->logout();
+
+
+
+
