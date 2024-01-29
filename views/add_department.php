@@ -44,7 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <label for="departmentName" class="form-control-label">Department Name</label>
                                 <input type="text" value="<?php echo $departmentName ?>" name="departmentName" placeholder="Enter your department name" class="form-control" required>
                             </div>
-
                             <button type="submit" class="btn btn-lg btn-info btn-block">
                                 <span id="payment-button-amount">Submit</span>
                             </button>

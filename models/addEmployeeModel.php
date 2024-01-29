@@ -31,7 +31,7 @@ class AddEmployeeModel {
         $password = mysqli_real_escape_string($this->con, $password);
         $departmentId = mysqli_real_escape_string($this->con, $departmentId);
 
-        $sql = "INSERT INTO employee(name, email, password, departmentId, role) VALUES ('$name', '$email', '$password', '$departmentId', 3)";
+        $sql = "INSERT INTO employee(name, email, password, departmentId, role) VALUES ('$name', '$email', '$password', '$departmentId', 2)";
         mysqli_query($this->con, $sql);
     }
 }
