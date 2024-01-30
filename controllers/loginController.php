@@ -4,7 +4,7 @@ session_start();
 $msg = "";
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
-    // Dependency injection: Pass $con to the authenticate function
+    
     authenticate($con, $_POST['email'], $_POST['password']);
 }
 

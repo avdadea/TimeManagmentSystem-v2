@@ -16,10 +16,12 @@ class AddManagerModel {
         $employeeId = mysqli_real_escape_string($this->con, $employeeId);
         $name = mysqli_real_escape_string($this->con, $name);
         $email = mysqli_real_escape_string($this->con, $email);
-        $password = mysqli_real_escape_string($this->con, $password);
         $departmentId = mysqli_real_escape_string($this->con, $departmentId);
 
-        $sql = "UPDATE employee SET name='$name', email='$email', password='$password', departmentId='$departmentId' WHERE employeeid='$employeeId'";
+        
+        $passwordUpdate = empty($password) ? '' : ", password='" . mysqli_real_escape_string($this->con, $password) . "'";
+
+        $sql = "UPDATE employee SET name='$name', email='$email'$passwordUpdate, departmentId='$departmentId' WHERE employeeid='$employeeId'";
         mysqli_query($this->con, $sql);
     }
 

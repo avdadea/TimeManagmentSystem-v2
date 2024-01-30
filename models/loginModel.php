@@ -6,7 +6,7 @@ class LoginModel {
     public function __construct($con) {
         $this->con = $con;
     }
-
+                                    
     public function authenticateUser($email, $password) {
         $email = mysqli_real_escape_string($this->con, $email);
         $password = mysqli_real_escape_string($this->con, $password);

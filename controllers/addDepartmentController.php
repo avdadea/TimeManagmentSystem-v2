@@ -1,6 +1,6 @@
 <?php
 
-require('../db.inc.php');
+
 require('../models/AddDepartmentModel.php');
 
 class AddDepartmentController {
